@@ -14,7 +14,7 @@ import io from "socket.io-client";
 import { useNavigate, useParams } from "react-router-dom";
 import { logout } from "../../slices/authSlice";
 import "../../css/typing.css";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://stayfit-backend.thomasjoseph.online";
 var socket, selectedChatCompare;
 
 const Messages = () => {

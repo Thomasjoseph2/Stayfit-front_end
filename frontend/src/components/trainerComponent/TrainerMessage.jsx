@@ -17,7 +17,7 @@ import { toast } from "react-toastify";
 import io from "socket.io-client";
 import { button, input } from "@material-tailwind/react";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://stayfit-backend.thomasjoseph.online";
 var socket, selectedChatCompare;
 
 const TrainerMessages = () => {
