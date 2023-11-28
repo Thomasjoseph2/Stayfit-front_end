@@ -34,7 +34,8 @@ const UserBody = () => {
   return (
     <div className="object-cover h-fit w-fit max-w-full flex flex-col items-center bg-black ">
       <img
-         alt="Description of the image"
+        src={image}
+        alt="Description of the image"
         className="object-cover  w-full h-[100vh]"
       />
       <div style={quoteStyle}>
