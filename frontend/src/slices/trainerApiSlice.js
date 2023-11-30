@@ -1,6 +1,6 @@
 import { apiSlice } from "./apiSlice";
 
-const TRAINER_URL = "https://stayfit-backend.thomasjoseph.online/trainer";
+const TRAINER_URL = "/api/trainer";
 
 export const trainerApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
