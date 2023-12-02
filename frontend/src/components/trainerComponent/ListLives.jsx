@@ -57,6 +57,20 @@ const ListLives = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!title.trim()) {
+      setError("Please enter a title.");
+      return;
+    }
+
+    if (!date) {
+      setError("Please select a date.");
+      return;
+    }
+
+    if (!time) {
+      setError("Please select a time.");
+      return;
+    }
     try {
       const randomId = await generateRandomId();
       const selectedDateTime = new Date(`${date}T${time}`);

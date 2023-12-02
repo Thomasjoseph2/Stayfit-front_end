@@ -15,7 +15,7 @@ const LoginPage = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [error,setError]=useState('')
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -60,6 +60,7 @@ const LoginPage = () => {
       );
       navigate("/");
     } catch (err) {
+      toast.error('something went wrong')
       setError("Invalid email or password");
     }
   };
@@ -164,6 +165,7 @@ const LoginPage = () => {
         <div className="my-6 space-y-2 mt-10 ">
           <GoogleLogin
             onSuccess={(response) => {
+              console.log(response,'response');
               googleSubmitHandler(response.credential);
             }}
             onError={() => {

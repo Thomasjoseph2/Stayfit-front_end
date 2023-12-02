@@ -105,8 +105,19 @@ const AddTrainerModal = ({ isOpen, onRequestClose }) => {
     }
 
     if (!profileImage) {
-      setGenderError("image required");
+      setImageError("image required");
       isValid = false;
+    }
+
+    const dobDate = new Date(dob);
+    const currentDate = new Date();
+    const minValidDate = new Date();
+    minValidDate.setFullYear(currentDate.getFullYear() - 18);
+
+    if (dobDate > minValidDate) {
+      setDobError("Trainer should be at least 18 years old.");
+      setIsLoading(false);
+      return;
     }
     if (isValid) {
       try {
@@ -415,8 +426,12 @@ const AddTrainerModal = ({ isOpen, onRequestClose }) => {
                           type="file"
                           accept="image/*"
                           onChange={handleImageChange}
-                          className="mb-2"
-                        />
+                          className={`mb-2 ${imageError ? "border-red-500" : ""}`}                        />
+                        {imageError && (
+                          <p className="text-red-500 text-xs italic">
+                            {imageError}
+                          </p>
+                        )}
                       </div>
                     </div>
 
