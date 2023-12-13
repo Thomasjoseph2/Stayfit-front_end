@@ -69,10 +69,13 @@ const ResultPosts = ({ refreshTrigger }) => {
   const handleCancelDelete = () => {
     setIsConfirmationVisible(false);
   };
-  return (
-    <div className="container mx-auto mt-8 mb-20">
-      {isLoading ? (
-        <ShimmerTrainerCard />
+return (
+  <div className="container mx-auto mt-8 mb-20">
+    {isLoading ? (
+      <ShimmerTrainerCard />
+    ) : (
+      posts.length === 0 ? (
+        <div className="text-white text-center text-2xl h-96">You haven't added any posts....</div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           {posts.map((post) => (
@@ -95,17 +98,19 @@ const ResultPosts = ({ refreshTrigger }) => {
             </div>
           ))}
         </div>
-      )}
+      )
+    )}
 
-      {isConfirmationVisible && (
-        <ConfirmationDialog
-          message="Are you sure you want to delete this post?"
-          onConfirm={handleConfirmDelete}
-          onCancel={handleCancelDelete}
-        />
-      )}
-    </div>
-  );
+    {isConfirmationVisible && (
+      <ConfirmationDialog
+        message="Are you sure you want to delete this post?"
+        onConfirm={handleConfirmDelete}
+        onCancel={handleCancelDelete}
+      />
+    )}
+  </div>
+);
+
 };
 
 export default ResultPosts;
