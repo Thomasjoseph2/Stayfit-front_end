@@ -82,7 +82,7 @@ const SubscriptionPlans = () => {
       setPlan(plan);
 
       const options = {
-        key: "rzp_test_4VSqO0TCBFvtCE",
+        key: "rzp_test_3aKlYN0Jk5jqZX",
         amount: price * 100,
         currency: "INR",
         name: "Stay fit",

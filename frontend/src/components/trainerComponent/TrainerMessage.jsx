@@ -15,9 +15,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
 import io from "socket.io-client";
-import { button, input } from "@material-tailwind/react";
 
-const ENDPOINT = "https://stayfit-backend.thomasjoseph.online";
+const ENDPOINT = "https://stayfit-backend.thomasjoseph.online/";
 var socket, selectedChatCompare;
 
 const TrainerMessages = () => {
