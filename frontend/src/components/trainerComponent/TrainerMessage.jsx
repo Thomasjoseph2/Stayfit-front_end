@@ -16,7 +16,7 @@ import { toast } from "react-toastify";
 
 import io from "socket.io-client";
 
-const ENDPOINT = "https://stayfit-backend-rho.vercel.app/";
+const ENDPOINT = "https://stayfit-backend-g9toc02r3-thomas-josephs-projects.vercel.app/";
 var socket, selectedChatCompare;
 
 const TrainerMessages = () => {
