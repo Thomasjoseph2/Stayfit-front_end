@@ -10,7 +10,7 @@ export default defineConfig({
     port:3000,
     proxy:{
       '/api':{
-        target:"https://stayfit-backend-rho.vercel.app/",
+        target:"https://stayfit-backend-g9toc02r3-thomas-josephs-projects.vercel.app/",
         changeOrigin:true,
       }
     },
