@@ -2,7 +2,7 @@ import {createApi,fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 
 //  const baseQuery=fetchBaseQuery({baseUrl:''})
-const baseQuery=fetchBaseQuery({baseUrl: "https://stayfit-backend.thomasjoseph.online", credentials: 'include'})
+const baseQuery=fetchBaseQuery({baseUrl: "https://stayfit-backend-rho.vercel.app", credentials: 'include'})
 
 
 
